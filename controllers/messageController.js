@@ -5,6 +5,6 @@ export const messageController = asynceHandler(async (req, res) => {
     const { messageId } = req.params
     const message = await getMessageById(Number(messageId))
 
-    if (!message) return res.send('Message does exits');
+    if (!message) return res.render('pages/error', {error: 'Following message does not exist'});
     res.render('pages/message', {message})
 })

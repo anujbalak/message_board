@@ -28,7 +28,7 @@ app.use('/messages' || '/message', messageRouter)
 
 app.use('/new', newRouter);
 app.use((req, res) => {
-    res.status(404).render('pages/error')
+    res.status(404).render('pages/error', {error: 'We run into an error!'})
 })
 
 app.listen(PORT , () => {

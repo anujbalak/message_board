@@ -76,13 +76,25 @@ a:hover, a:focus {
     flex-wrap: wrap;
     gap: 2em;
     justify-content: center;
+    margin-bottom: 5em;
 }
 
 .message-container p {
     padding: 10px;
 }
 
+.message-page {
+    display: grid;
+}
+
+.message-page a {
+    justify-self: center;
+    width: 95%;
+    max-width: 800px;
+}
+
 .message-container {
+    justify-self: center;
     border: 1px solid #eee;
 }
 
@@ -101,9 +113,10 @@ a:hover, a:focus {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
+    background-color: #000;
 }
 
 .footer-container {
@@ -114,3 +127,39 @@ footer {
 .footer-line {
     color: #eee;
 }
+
+.new-message-page {
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+}
+
+.new-message-page form {
+    display: grid;
+    gap: 1em;
+    justify-content: center;
+}
+
+.form-input {
+    all: unset;
+    border: #eee 1px solid;
+    padding: 5px;
+    max-width: 500px;
+    width: 100%;
+    min-width: 300px;
+}
+
+.new-message-page button {
+    font-size: 1.3rem;
+    font-family: inherit;
+    color: #000;
+    background-color: #eee;
+    border-radius: 0;
+    border: 0;
+    justify-self: center;
+    width: 100%;
+}
+
+.new-message-page button:hover, .new-message-page button:focus {
+    opacity: 80%;
+} 

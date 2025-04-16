@@ -1,0 +1,11 @@
+<%- include('../partials/header', {title: 'New Message'}) %>
+
+<div class="new-message-page">
+    <h3>Add new message</h3>
+    <form method="post" action="/new">
+        <%- include('../partials/form', {type: 'User', name: 'username'}) %>
+        <%- include('../partials/form', {type: 'Text', name: 'messageText'}) %> 
+        <%- include('../partials/button', {type: 'Submit'}) %> 
+    </form>
+</div>
+<%- include('../partials/footer') %> 

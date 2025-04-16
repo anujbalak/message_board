@@ -18,6 +18,8 @@ export const title = {
     index: 'Index',
     new: 'New'
 }
+const assetsPath = path.join(__dirname, 'public')
+app.use(express.static(assetsPath))
 
 app.use('/', indexRouter)
 app.use('/messages' || '/message', messageRouter)

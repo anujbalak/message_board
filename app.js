@@ -27,7 +27,9 @@ app.use('/', indexRouter)
 app.use('/messages' || '/message', messageRouter)
 
 app.use('/new', newRouter);
-
+app.use((req, res) => {
+    res.status(404).render('pages/error')
+})
 
 app.listen(PORT , () => {
     console.log('Server started at ' + PORT);

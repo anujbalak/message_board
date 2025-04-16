@@ -163,3 +163,12 @@ footer {
 .new-message-page button:hover, .new-message-page button:focus {
     opacity: 80%;
 } 
+
+/* error */
+
+.errorpage {
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 40, 76);
+    font-size: 1.3rem;
+}

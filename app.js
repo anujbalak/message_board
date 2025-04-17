@@ -9,7 +9,7 @@ import { messageRouter } from './Routes/messageRouter.js'
 
 const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const PORT = 4000;
+const PORT = 8000;
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))

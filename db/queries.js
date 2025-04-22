@@ -7,8 +7,8 @@ async function getAllMessages() {
 }
 
 async function getMessage(id) {
-    const { message } = pool.query('SELECT * FROM messages WHERE id = $1', [id])
-    return message;
+    const  { rows }  = await pool.query('SELECT * FROM messages WHERE id = $1', [id])
+    return rows;
 }
 
 async function insertMessage(name, message) {

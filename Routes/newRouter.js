@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { messages } from '../data/messages.js'
+import { insertMessage } from '../db/queries.js'
 
 const newRouter = Router()
 
@@ -7,14 +8,9 @@ newRouter.get('/', (req, res) => {
     res.render('pages/new')
 })
 
-newRouter.post('/', (req, res) => {
+newRouter.post('/', async (req, res) => {
    const { username, messageText} = req.body;
-   messages.push({
-    text: messageText,
-    user: username,
-    id: messages.length + 1,
-    added: new Date(),
-   })
+   await insertMessage(username, messageText);
    res.redirect('/')
 })
 
